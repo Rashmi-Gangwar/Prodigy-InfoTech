@@ -14,11 +14,11 @@ search.addEventListener('click',()=>{
     if(city == '')
         return;
 
-    fetch('https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}').then (response => response.json()).then(json => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${APIKey}`).then (response => response.json()).then(json => {
 
         if(json.cod == '404'){
             cityHide.textContent = city;
-            container.style.heigth = '400px';
+            container.style.height = '400px';
             weatherBox.classList.remove('active');
             weatherDetails.classList.remove('active');
             error404.classList.add('active');
@@ -69,10 +69,10 @@ search.addEventListener('click',()=>{
                     image.src = 'https://tse4.mm.bing.net/th?id=OIP.lSpXFFu2IITQntwdE2pUcAHaEc&pid=Api&P=0&h=220';
             }
     
-            temperature.innerHTML = `${parseInt(json.main.temp)}<span>℃</span>`;
-            description.innerHTML = `${json.weather[0].description}`;
-            humidity.innerHTML = `${json.main.humidity}%`;
-            wind.innerHTML = `${parseInt(json.wind.speed)}Km/h`;
+            temperature.innerHTML = ${parseInt(json.main.temp)}<span>℃</span>;
+            description.innerHTML = ${json.weather[0].description};
+            humidity.innerHTML = ${json.main.humidity}%;
+            wind.innerHTML = ${parseInt(json.wind.speed)}Km/h;
 
             const infoWeather = document.querySelector('.info-weather');
             const infoHumidity = document.querySelector('.info-humidity');
@@ -88,7 +88,7 @@ search.addEventListener('click',()=>{
             elCloneInfoHumidity.id = 'clone-info-humidity';
             elCloneInfoHumidity.classList.add('active-clone');
 
-            elCloneInfoWind.id = 'clone=info-wind';
+            elCloneInfoWind.id = 'clone-info-wind';
             elCloneInfoWind.classList.add('active-clone');
 
             setTimeout(() => {
