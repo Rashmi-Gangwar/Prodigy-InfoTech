@@ -35,8 +35,6 @@ header{
     display: flex;
     column-gap: 40px;
     list-style: none;
-    margin: 30px;
-    padding: 10px;
     cursor: pointer;
 }
 .nav_links a:hover{
@@ -46,28 +44,27 @@ header{
 
 
 .home_container{
-    padding: 70px 20px;
+    padding: 100px 20px;
     text-align: center;
     background-color: rgb(34, 34, 34);
 }
 .home_container img{
+    background-image: url("Prodigy-InfoTech/PRODIGY_WD_04/Images/Personal Image.jpeg");
     border-radius: 50%;
     box-shadow:  22px 22px 30px #828282;
-    margin-top: 200px;
-
+    margin-top: 150px;
     max-width: 200px;
     height: auto;
     cursor: pointer;
 }
 .home_container h2{
     color: rgb(216, 191, 216);
-    font-size: 25px;
+    font-size: 25px; 
     margin-top: 30px;
 }
 .home_container h1{
     color: rgb(230, 230, 250);
-    font-size: 40px;
-    margin-top: 10px;
+    margin-top: 20px;
 }
 .home_container h1:hover :nth-child(1){
     color: rgb(255, 99, 71);
@@ -75,18 +72,19 @@ header{
 }
 .home_container h3{
     color: rgb(216, 191, 216);
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 
 .about_container{
     background-color: #151414;
-    margin: 30px;
+    margin: 30px; 
+    padding: 50px;
+    text-align: center;
     border-radius: 10px;
 }
 .about_container h3{
     color: rgb(216, 191, 216);
-    padding: 50px;
     font-size: 35px;
 }
 .about_container h3:hover{
@@ -143,6 +141,10 @@ hr{
 }
 
 
+.skills_container {
+    padding: 50px;
+    text-align: center;
+}
 .skills_container h3{
     color: rgb(216, 191, 216);
     padding: 50px;
@@ -155,36 +157,25 @@ hr{
 .skills_div_1{
     margin: 0 60px;
     display: flex;
-    justify-content: space-between;
-    column-gap: 1px;
+    justify-content: center; 
+    gap: 30px;
     text-align: center;
     align-items: center;
-}
-.skills_div_2{
-    margin: 0 60px;
-    display: flex;
-    column-gap: 1px;
-    text-align: center;
-    align-items: center;
-    padding: 0 50px 0 100px;
 }
 .box_1{
-    padding: 40px 40px;
-    margin: 30px 40px;
-    width: 400px;
+    padding: 30px;
+    width: 300px;
     background-color: rgb(34, 34, 34);
     border-radius: 46px;
     box-shadow:  5px 5px 21px #676767, -5px -5px 21px #ffffff;
 }
 .box_1 i{
     color: rgb(216, 191, 216);
-    font-size: 45px;
-    margin-top: 5px;
+    font-size: 40px;
 }
 .box_1 h4{
     color: rgb(209, 216, 216);
-    font-size: 25px;
-    margin: 10px;
+    margin-top: 10px;
 }
 .box_1 h4:hover{
     color: rgb(255, 99, 71);
@@ -330,3 +321,44 @@ hr{
     font-size: 18px;
     padding-bottom: 20px;
 } 
+
+
+/* Responsive */
+@media screen and (max-width: 768px) {
+    .nav_links ul {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .home_container img {
+        margin-top: 50px;
+    }
+
+    .about_container{
+        flex-direction: column;
+    }
+
+    .total_container{
+        gap: 15px;
+        margin-left: -1.5px;
+    }
+
+    .skills_div_1{
+        flex-direction: column;
+    }
+
+    .Project_container{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .certificate_container{
+        flex-direction: column;
+        padding: 0px 20px;
+    }
+
+    .footer_container{
+        height: auto;
+        flex-direction: column;
+    }
+}
